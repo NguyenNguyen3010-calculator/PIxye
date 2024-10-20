@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>20/10 - Em Bé Siu Cutiii 💖</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background: linear-gradient(to bottom right, #ffafbd, #ffc3a0);
+            font-family: 'Cursive', sans-serif;
+            color: #fff9e3;
+            text-align: center;
+        }
+
+        .container {
+            padding: 12vh 5%;
+            backdrop-filter: blur(12px);
+            background: rgba(0, 0, 0, 0.5);
+            border-radius: 30px;
+            box-shadow: 0 0 30px rgba(255, 192, 203, 0.8);
+            animation: float 4s infinite alternate;
+        }
+
+        h1 {
+            font-size: 4rem;
+            margin-bottom: 1.2rem;
+            animation: fadeIn 2s ease-in-out;
+            color: #ffccff;
+            text-shadow: 2px 2px 8px pink;
+        }
+
+        p {
+            font-size: 1.6rem;
+            line-height: 1.8;
+            margin-bottom: 2rem;
+            text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
+        }
+
+        .heart {
+            width: 70px;
+            height: 70px;
+            background-color: #ff69b4;
+            clip-path: polygon(50% 0%, 0% 50%, 50% 100%, 100% 50%);
+            animation: heartbeat 1.2s infinite;
+            margin: 20px auto;
+        }
+
+        .button {
+            background-color: #ffb6c1;
+            color: #4a4a4a;
+            padding: 15px 35px;
+            border-radius: 30px;
+            font-size: 1.8rem;
+            border: none;
+            cursor: pointer;
+            transition: background 0.5s ease, transform 0.2s;
+            box-shadow: 0 0 15px pink;
+        }
+
+        .button:hover {
+            background-color: #ff69b4;
+            color: white;
+            transform: scale(1.1);
+        }
+
+        .stars {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+        }
+
+        .stars span {
+            position: absolute;
+            display: block;
+            background: white;
+            width: 3px;
+            height: 3px;
+            border-radius: 50%;
+            animation: twinkle 2s infinite;
+        }
+
+        .stars span:nth-child(odd) {
+            animation-duration: 3s;
+        }
+
+        @keyframes twinkle {
+            0%, 100% { opacity: 0.5; }
+            50% { opacity: 1; }
+        }
+
+        @keyframes fadeIn {
+            0% { opacity: 0; transform: translateY(-20px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes heartbeat {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.2); }
+        }
+
+        @keyframes float {
+            from { transform: translateY(0); }
+            to { transform: translateY(-10px); }
+        }
+
+        .floating-balloons {
+            position: absolute;
+            bottom: -150px;
+            width: 100%;
+            display: flex;
+            justify-content: space-around;
+            animation: rise 15s infinite;
+        }
+
+        .balloon {
+            width: 80px;
+            height: 120px;
+            background: radial-gradient(circle, #ffcccc, #ff69b4);
+            border-radius: 50%;
+            position: relative;
+            box-shadow: 0 0 15px rgba(255, 105, 180, 0.8);
+        }
+
+        .balloon::before {
+            content: '';
+            position: absolute;
+            bottom: -30px;
+            left: 50%;
+            width: 2px;
+            height: 30px;
+            background-color: #ff69b4;
+            transform: translateX(-50%);
+        }
+
+        @keyframes rise {
+            0% { bottom: -150px; }
+            100% { bottom: 100%; }
+        }
+    </style>
+</head>
+<body>
+    <div class="stars">
+        <span style="top:10%; left:5%;"></span>
+        <span style="top:30%; left:20%;"></span>
+        <span style="top:50%; left:80%;"></span>
+        <span style="top:70%; left:60%;"></span>
+        <span style="top:90%; left:10%;"></span>
+        <span style="top:20%; left:90%;"></span>
+    </div>
+
+    <div class="container">
+        <h1>Chúc Mừng 20/10, Em Bé Siu Cutiii 💖</h1>
+        <p>
+            Anh chúc em mỗi ngày luôn vui vẻ, 
+            luôn cười thật nhiều và hạnh phúc mãi mãi. Hôm nay là ngày của béee, và anh thật may mắn khi 
+            được có béee Piii trong đời! Yêu em nhiều nhắmmm, công chúa bé bỏng của anh! 💕
+        </p>
+        <div class="heart"></div>
+        <button class="button" onclick="alert('Anh yêu em vô cùng! 🥰')">Anh Yêu Em Nhấttt! 💘</button>
+    </div>
+
+    <div class="floating-balloons">
+        <div class="balloon"></div>
+        <div class="balloon"></div>
+        <div class="balloon"></div>
+    </div>
+</body>
+</html>
